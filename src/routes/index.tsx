@@ -585,7 +585,7 @@ function Investimento() {
             <h2 className="mt-4 font-serif text-3xl sm:text-4xl">Caminho Essencial</h2>
             <div className="mt-8 flex items-baseline justify-center gap-2">
               <span className="font-serif text-6xl sm:text-7xl text-[color:var(--color-petrol)] tracking-tight">
-                R$ 347
+                R$ 350
               </span>
               <span className="font-serif text-2xl text-[color:var(--color-petrol)]/80">,00</span>
             </div>
