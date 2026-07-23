@@ -786,6 +786,63 @@ function MobileStickyCTA() {
   );
 }
 
+function QuemSou() {
+  return (
+    <Section id="quem-sou" className="bg-[color:var(--color-surface)]/60">
+      <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-16 items-center">
+        <div className="relative mx-auto w-full max-w-[420px]">
+          <div aria-hidden className="absolute inset-0 -m-6 rounded-[2rem] bg-gradient-to-br from-[color:var(--color-sky)]/40 to-[color:var(--color-mint)]/30 blur-3xl" />
+          <div className="relative rounded-[2rem] overflow-hidden border border-border/60 soft-shadow">
+            <img src={maluPhoto.url} alt="Malu Mattos" className="w-full h-auto object-cover" />
+          </div>
+        </div>
+        <div>
+          <Eyebrow>Quem sou</Eyebrow>
+          <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl leading-tight">
+            Quem é Malu Mattos
+          </h2>
+          <div className="mt-8 space-y-5 text-[16px] leading-relaxed text-muted-foreground">
+            <p className="font-serif italic text-lg text-foreground/85">Eu sou a Malu.</p>
+            <p>
+              Sou jornalista formada pela PUC-SP e, há mais de 20 anos, construo uma trajetória
+              marcada pela curiosidade, pela sensibilidade e pela vontade de transformar experiências
+              em significado.
+            </p>
+            <p>
+              Ao longo desse caminho, transitei por diferentes áreas. Trabalhei com comunicação
+              corporativa, produção de conteúdo, projetos autorais e, por mais de 10 anos, com
+              decoração de eventos. Em cada uma dessas fases, havia algo em comum: o desejo de
+              cuidar dos detalhes, contar histórias e criar experiências que permanecessem na memória.
+            </p>
+            <div className="rounded-2xl bg-card/80 border border-border/60 p-6 space-y-4 soft-shadow">
+              <p>
+                Durante muito tempo, achei que precisava escolher uma única direção. O Desenho
+                Humano me ajudou a compreender que a minha multipotencialidade faz parte de quem eu
+                sou. Também me mostrou como respeitar meu ritmo, reconhecer a forma como meu corpo
+                toma decisões e usar melhor a minha energia.
+              </p>
+              <p>
+                Foi a partir desse encontro que comecei a viver com mais clareza, menos
+                autocobrança e mais confiança na minha própria natureza.
+              </p>
+            </div>
+            <p>
+              Hoje, estudo e compartilho o Desenho Humano como uma ferramenta de autoconhecimento
+              aplicada à vida real. Um mapa que ajuda a compreender o próprio funcionamento,
+              acolher talentos e desafios e fazer escolhas mais alinhadas.
+            </p>
+            <p className="font-serif italic text-foreground/85">
+              Acredito que se conhecer não significa se encaixar em uma definição. Significa
+              reconhecer quem você é, respeitar o seu caminho e viver com mais leveza, presença e
+              curiosidade pelo que de melhor podemos ser.
+            </p>
+          </div>
+        </div>
+      </div>
+    </Section>
+  );
+}
+
 function LandingPage() {
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-[color:var(--color-mint)]/40">
@@ -796,7 +853,7 @@ function LandingPage() {
         <Transformacao />
         <Identificacao />
         <ComoFunciona />
-        <VoceRecebe />
+        <QuemSou />
         <Investimento />
         <Faq />
         <FinalSection />
