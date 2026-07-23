@@ -10,9 +10,6 @@ import {
   LeafIcon,
   SparkleIcon,
   CheckIcon,
-  PlayIcon,
-  PdfIcon,
-  ChatIcon,
   ChevronIcon,
 } from "@/components/ce/icons";
 
