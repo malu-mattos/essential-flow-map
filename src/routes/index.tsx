@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import logoAsset from "@/assets/caminho-essencial-logo.png.asset.json";
+import logoAsset from "@/assets/caminho-essencial-symbol.png.asset.json";
+import maluPhoto from "@/assets/malu-mattos.jpg.asset.json";
 import { EnergyOrb } from "@/components/ce/EnergyOrb";
 import {
   EnergyIcon,
@@ -9,9 +10,6 @@ import {
   LeafIcon,
   SparkleIcon,
   CheckIcon,
-  PlayIcon,
-  PdfIcon,
-  ChatIcon,
   ChevronIcon,
 } from "@/components/ce/icons";
 
@@ -43,7 +41,7 @@ const NAV = [
   { href: "#revelacoes", label: "O que você descobrirá" },
   { href: "#beneficios", label: "Benefícios" },
   { href: "#como-funciona", label: "Como funciona" },
-  { href: "#voce-recebe", label: "O que você recebe" },
+  { href: "#quem-sou", label: "Quem sou" },
   { href: "#faq", label: "Perguntas frequentes" },
 ];
 
@@ -162,7 +160,7 @@ function Hero() {
 
       <div className="relative mx-auto max-w-6xl grid lg:grid-cols-[1.05fr_1fr] gap-14 lg:gap-10 items-center">
         <div className="text-center lg:text-left">
-          <Eyebrow>Desenho Humano personalizado</Eyebrow>
+          <Eyebrow>Seu Caminho Essencial no Desenho Humano</Eyebrow>
           <h1 className="mt-5 font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-tight text-foreground">
             Caminho <em className="not-italic text-[color:var(--color-petrol)]">Essencial</em>
           </h1>
@@ -175,16 +173,9 @@ function Hero() {
           </p>
 
           <div className="mt-8 space-y-3 text-[15px] leading-relaxed text-muted-foreground max-w-xl mx-auto lg:mx-0">
-            <p>Talvez você já tenha sentido que precisa fazer mais esforço do que as outras pessoas para que as coisas aconteçam.</p>
+            <p>Talvez você já tenha sentido que precisa fazer muito esforço para que as coisas aconteçam.</p>
             <p>Pensa demais antes de decidir. Questiona se está seguindo o caminho certo.</p>
             <p>Tenta se adaptar ao que esperam de você e, mesmo assim, sente que alguma coisa não encaixa.</p>
-          </div>
-
-          <div className="mt-10 flex flex-col sm:flex-row gap-4 items-center lg:items-start justify-center lg:justify-start">
-            <CTA className="w-full sm:w-auto">Quero receber minha análise</CTA>
-            <p className="text-[13px] text-muted-foreground max-w-xs text-center lg:text-left">
-              Análise gravada + PDF personalizado + encontro de tira-dúvidas.
-            </p>
           </div>
         </div>
 
@@ -195,23 +186,28 @@ function Hero() {
       </div>
 
       {/* intro follow-up block */}
-      <div className="relative mx-auto max-w-3xl text-center mt-20 sm:mt-24">
+      <div className="relative mx-auto max-w-3xl mt-20 sm:mt-24">
         <div className="divider-fade w-40 mx-auto mb-8" />
-        <p className="text-base sm:text-[17px] leading-relaxed text-muted-foreground">
-          Muitas vezes, isso acontece quando você está vivendo de uma forma que se afasta da sua própria natureza.
-        </p>
-        <p className="mt-5 text-[17px] sm:text-lg leading-relaxed text-foreground/90">
-          O <span className="font-serif italic text-[color:var(--color-petrol)]">Caminho Essencial</span> é uma análise
-          personalizada do seu Desenho Humano, criada para mostrar como a sua energia funciona e como
-          você pode se movimentar pela vida com mais consciência, confiança e alinhamento.
-        </p>
-        <p className="mt-5 font-serif italic text-lg sm:text-xl text-foreground/85">
-          Essa análise é como um mapa que te devolve para si mesma.
-        </p>
-        <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-          Um mapa que mostra caminhos mais coerentes com quem você é, com menos desgaste,
-          menos dúvida e mais fluidez.
-        </p>
+        <div className="rounded-3xl bg-card/80 border border-border/60 backdrop-blur-sm soft-shadow p-8 sm:p-12 text-center space-y-5">
+          <p className="text-base sm:text-[17px] leading-relaxed text-muted-foreground">
+            Muitas vezes, isso acontece quando você está vivendo de uma forma que se afasta da sua própria natureza.
+          </p>
+          <p className="text-[17px] sm:text-lg leading-relaxed text-foreground/90">
+            O <span className="font-serif italic text-[color:var(--color-petrol)]">Caminho Essencial</span> é uma análise
+            personalizada do seu Desenho Humano, criada para mostrar como a sua energia funciona e como
+            você pode se movimentar pela vida com mais consciência, confiança e alinhamento.
+          </p>
+          <p className="font-serif italic text-lg sm:text-xl text-foreground/85">
+            Essa análise é como um mapa que te devolve para si mesma.
+          </p>
+          <p className="text-base leading-relaxed text-muted-foreground">
+            Um mapa que mostra caminhos mais coerentes com quem você é, com menos desgaste,
+            menos dúvida e mais fluidez.
+          </p>
+        </div>
+        <div className="mt-10 flex justify-center">
+          <CTA className="w-full sm:w-auto">Quero receber minha análise</CTA>
+        </div>
       </div>
     </section>
   );
@@ -428,7 +424,7 @@ function ComoFunciona() {
   return (
     <Section id="como-funciona">
       <div className="text-center max-w-2xl mx-auto">
-        <Eyebrow>Jornada</Eyebrow>
+        <Eyebrow>Como funciona</Eyebrow>
         <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl leading-tight">Como funciona</h2>
       </div>
       <ol className="relative mt-16 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-1 lg:grid-cols-5 lg:gap-6">
@@ -464,107 +460,6 @@ function ComoFunciona() {
   );
 }
 
-function VoceRecebe() {
-  return (
-    <Section id="voce-recebe" className="bg-[color:var(--color-surface)]/70">
-      <div className="text-center max-w-2xl mx-auto">
-        <Eyebrow>Entregáveis</Eyebrow>
-        <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl leading-tight">O que você recebe</h2>
-      </div>
-      <div className="mt-14 grid md:grid-cols-3 gap-6">
-        {/* Card 1 - Video */}
-        <article className="rounded-3xl bg-card p-8 border border-border/60 soft-shadow flex flex-col">
-          <MockupVideo />
-          <h3 className="mt-6 font-serif text-2xl">Análise gravada e personalizada</h3>
-          <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">
-            Uma leitura desenvolvida a partir do seu mapa, para você assistir com calma, fazer pausas e
-            rever quantas vezes precisar.
-          </p>
-        </article>
-        {/* Card 2 - PDF */}
-        <article className="rounded-3xl bg-card p-8 border border-border/60 soft-shadow flex flex-col">
-          <MockupPdf />
-          <h3 className="mt-6 font-serif text-2xl">PDF com suas principais chaves</h3>
-          <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">
-            Um material de apoio com os pontos essenciais do seu Desenho Humano para manter essas
-            informações acessíveis no dia a dia.
-          </p>
-        </article>
-        {/* Card 3 - Chat */}
-        <article className="rounded-3xl bg-card p-8 border border-border/60 soft-shadow flex flex-col">
-          <MockupChat />
-          <h3 className="mt-6 font-serif text-2xl">Encontro de tira-dúvidas pelo WhatsApp</h3>
-          <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">
-            Um momento individual, realizado após o envio da gravação, para esclarecer dúvidas e
-            aprofundar sua compreensão.
-          </p>
-        </article>
-      </div>
-    </Section>
-  );
-}
-
-function MockupVideo() {
-  return (
-    <div className="relative aspect-[4/3] rounded-2xl bg-gradient-to-br from-[color:var(--color-sky)]/40 via-[color:var(--color-mint)]/25 to-[color:var(--color-sand)]/30 border border-border/60 overflow-hidden">
-      <div className="absolute inset-6 rounded-xl bg-background/80 backdrop-blur-sm border border-border/40 flex items-center justify-center">
-        <div className="h-16 w-16 rounded-full bg-[color:var(--color-petrol)]/90 flex items-center justify-center soft-shadow">
-          <svg viewBox="0 0 24 24" className="h-7 w-7 text-primary-foreground fill-current ml-1">
-            <path d="M8 5v14l11-7z" />
-          </svg>
-        </div>
-      </div>
-      <div className="absolute bottom-3 left-3 right-3 h-1 rounded-full bg-foreground/10">
-        <div className="h-1 w-1/3 rounded-full bg-[color:var(--color-petrol)]" />
-      </div>
-    </div>
-  );
-}
-
-function MockupPdf() {
-  return (
-    <div className="relative aspect-[4/3] rounded-2xl bg-gradient-to-br from-[color:var(--color-sand)]/35 via-background to-[color:var(--color-mint)]/25 border border-border/60 p-6 overflow-hidden">
-      <div className="mx-auto h-full w-3/4 rounded-lg bg-card border border-border/60 soft-shadow p-4">
-        <div className="flex items-center gap-1.5">
-          <img src={logoAsset.url} alt="" className="h-6 w-6" />
-          <div className="h-2 w-16 rounded bg-[color:var(--color-olive)]/40" />
-        </div>
-        <div className="mt-4 space-y-2">
-          <div className="h-2 rounded bg-foreground/10 w-5/6" />
-          <div className="h-2 rounded bg-foreground/10 w-full" />
-          <div className="h-2 rounded bg-foreground/10 w-4/6" />
-          <div className="h-2 rounded bg-foreground/10 w-3/6" />
-        </div>
-        <div className="mt-4 h-10 rounded bg-[color:var(--color-mint)]/30" />
-        <div className="mt-3 space-y-2">
-          <div className="h-2 rounded bg-foreground/10 w-full" />
-          <div className="h-2 rounded bg-foreground/10 w-4/6" />
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function MockupChat() {
-  return (
-    <div className="relative aspect-[4/3] rounded-2xl bg-gradient-to-br from-[color:var(--color-mint)]/30 via-background to-[color:var(--color-sky)]/40 border border-border/60 p-6 overflow-hidden">
-      <div className="space-y-2.5">
-        <div className="max-w-[70%] rounded-2xl rounded-tl-md bg-card border border-border/60 px-3.5 py-2 text-[12px] text-muted-foreground">
-          Olá! Vamos conversar sobre seu mapa?
-        </div>
-        <div className="ml-auto max-w-[70%] rounded-2xl rounded-tr-md bg-[color:var(--color-mint)]/50 px-3.5 py-2 text-[12px] text-foreground">
-          Sim, tenho algumas dúvidas 🌿
-        </div>
-        <div className="max-w-[80%] rounded-2xl rounded-tl-md bg-card border border-border/60 px-3.5 py-2 text-[12px] text-muted-foreground">
-          Perfeito. Podemos começar pela sua Autoridade.
-        </div>
-        <div className="ml-auto max-w-[50%] rounded-2xl rounded-tr-md bg-[color:var(--color-petrol)]/85 px-3.5 py-2 text-[12px] text-primary-foreground">
-          Combinado ✨
-        </div>
-      </div>
-    </div>
-  );
-}
 
 function Investimento() {
   const bullets = [
@@ -586,7 +481,7 @@ function Investimento() {
             <h2 className="mt-4 font-serif text-3xl sm:text-4xl">Caminho Essencial</h2>
             <div className="mt-8 flex items-baseline justify-center gap-2">
               <span className="font-serif text-6xl sm:text-7xl text-[color:var(--color-petrol)] tracking-tight">
-                R$ 347
+                R$ 350
               </span>
               <span className="font-serif text-2xl text-[color:var(--color-petrol)]/80">,00</span>
             </div>
@@ -738,7 +633,7 @@ function Footer() {
               <span className="font-serif text-lg">Caminho Essencial</span>
             </div>
             <p className="mt-4 text-[13.5px] leading-relaxed text-muted-foreground">
-              [INSERIR nome profissional]
+              by Malu Mattos
             </p>
           </div>
           <div>
@@ -746,7 +641,7 @@ function Footer() {
               Contato
             </h4>
             <ul className="mt-4 space-y-2 text-[14px] text-muted-foreground">
-              <li><a href="#" className="hover:text-foreground transition-colors">Instagram: [INSERIR]</a></li>
+              <li><a href="https://instagram.com/soumalumattos" target="_blank" rel="noreferrer" className="hover:text-foreground transition-colors">Instagram: soumalumattos</a></li>
               <li><a href="#" className="hover:text-foreground transition-colors">WhatsApp: [INSERIR]</a></li>
               <li><a href="#" className="hover:text-foreground transition-colors">E-mail: [INSERIR]</a></li>
             </ul>
@@ -787,6 +682,63 @@ function MobileStickyCTA() {
   );
 }
 
+function QuemSou() {
+  return (
+    <Section id="quem-sou" className="bg-[color:var(--color-surface)]/60">
+      <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-16 items-center">
+        <div className="relative mx-auto w-full max-w-[420px]">
+          <div aria-hidden className="absolute inset-0 -m-6 rounded-[2rem] bg-gradient-to-br from-[color:var(--color-sky)]/40 to-[color:var(--color-mint)]/30 blur-3xl" />
+          <div className="relative rounded-[2rem] overflow-hidden border border-border/60 soft-shadow">
+            <img src={maluPhoto.url} alt="Malu Mattos" className="w-full h-auto object-cover" />
+          </div>
+        </div>
+        <div>
+          <Eyebrow>Quem sou</Eyebrow>
+          <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl leading-tight">
+            Quem é Malu Mattos
+          </h2>
+          <div className="mt-8 space-y-5 text-[16px] leading-relaxed text-muted-foreground">
+            <p className="font-serif italic text-lg text-foreground/85">Eu sou a Malu.</p>
+            <p>
+              Sou jornalista formada pela PUC-SP e, há mais de 20 anos, construo uma trajetória
+              marcada pela curiosidade, pela sensibilidade e pela vontade de transformar experiências
+              em significado.
+            </p>
+            <p>
+              Ao longo desse caminho, transitei por diferentes áreas. Trabalhei com comunicação
+              corporativa, produção de conteúdo, projetos autorais e, por mais de 10 anos, com
+              decoração de eventos. Em cada uma dessas fases, havia algo em comum: o desejo de
+              cuidar dos detalhes, contar histórias e criar experiências que permanecessem na memória.
+            </p>
+            <div className="rounded-2xl bg-card/80 border border-border/60 p-6 space-y-4 soft-shadow">
+              <p>
+                Durante muito tempo, achei que precisava escolher uma única direção. O Desenho
+                Humano me ajudou a compreender que a minha multipotencialidade faz parte de quem eu
+                sou. Também me mostrou como respeitar meu ritmo, reconhecer a forma como meu corpo
+                toma decisões e usar melhor a minha energia.
+              </p>
+              <p>
+                Foi a partir desse encontro que comecei a viver com mais clareza, menos
+                autocobrança e mais confiança na minha própria natureza.
+              </p>
+            </div>
+            <p>
+              Hoje, estudo e compartilho o Desenho Humano como uma ferramenta de autoconhecimento
+              aplicada à vida real. Um mapa que ajuda a compreender o próprio funcionamento,
+              acolher talentos e desafios e fazer escolhas mais alinhadas.
+            </p>
+            <p className="font-serif italic text-foreground/85">
+              Acredito que se conhecer não significa se encaixar em uma definição. Significa
+              reconhecer quem você é, respeitar o seu caminho e viver com mais leveza, presença e
+              curiosidade pelo que de melhor podemos ser.
+            </p>
+          </div>
+        </div>
+      </div>
+    </Section>
+  );
+}
+
 function LandingPage() {
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-[color:var(--color-mint)]/40">
@@ -797,7 +749,7 @@ function LandingPage() {
         <Transformacao />
         <Identificacao />
         <ComoFunciona />
-        <VoceRecebe />
+        <QuemSou />
         <Investimento />
         <Faq />
         <FinalSection />
