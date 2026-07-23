@@ -189,23 +189,28 @@ function Hero() {
       </div>
 
       {/* intro follow-up block */}
-      <div className="relative mx-auto max-w-3xl text-center mt-20 sm:mt-24">
+      <div className="relative mx-auto max-w-3xl mt-20 sm:mt-24">
         <div className="divider-fade w-40 mx-auto mb-8" />
-        <p className="text-base sm:text-[17px] leading-relaxed text-muted-foreground">
-          Muitas vezes, isso acontece quando você está vivendo de uma forma que se afasta da sua própria natureza.
-        </p>
-        <p className="mt-5 text-[17px] sm:text-lg leading-relaxed text-foreground/90">
-          O <span className="font-serif italic text-[color:var(--color-petrol)]">Caminho Essencial</span> é uma análise
-          personalizada do seu Desenho Humano, criada para mostrar como a sua energia funciona e como
-          você pode se movimentar pela vida com mais consciência, confiança e alinhamento.
-        </p>
-        <p className="mt-5 font-serif italic text-lg sm:text-xl text-foreground/85">
-          Essa análise é como um mapa que te devolve para si mesma.
-        </p>
-        <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-          Um mapa que mostra caminhos mais coerentes com quem você é, com menos desgaste,
-          menos dúvida e mais fluidez.
-        </p>
+        <div className="rounded-3xl bg-card/80 border border-border/60 backdrop-blur-sm soft-shadow p-8 sm:p-12 text-center space-y-5">
+          <p className="text-base sm:text-[17px] leading-relaxed text-muted-foreground">
+            Muitas vezes, isso acontece quando você está vivendo de uma forma que se afasta da sua própria natureza.
+          </p>
+          <p className="text-[17px] sm:text-lg leading-relaxed text-foreground/90">
+            O <span className="font-serif italic text-[color:var(--color-petrol)]">Caminho Essencial</span> é uma análise
+            personalizada do seu Desenho Humano, criada para mostrar como a sua energia funciona e como
+            você pode se movimentar pela vida com mais consciência, confiança e alinhamento.
+          </p>
+          <p className="font-serif italic text-lg sm:text-xl text-foreground/85">
+            Essa análise é como um mapa que te devolve para si mesma.
+          </p>
+          <p className="text-base leading-relaxed text-muted-foreground">
+            Um mapa que mostra caminhos mais coerentes com quem você é, com menos desgaste,
+            menos dúvida e mais fluidez.
+          </p>
+        </div>
+        <div className="mt-10 flex justify-center">
+          <CTA className="w-full sm:w-auto">Quero receber minha análise</CTA>
+        </div>
       </div>
     </section>
   );
