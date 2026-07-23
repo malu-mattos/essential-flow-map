@@ -427,7 +427,7 @@ function ComoFunciona() {
   return (
     <Section id="como-funciona">
       <div className="text-center max-w-2xl mx-auto">
-        <Eyebrow>Jornada</Eyebrow>
+        <Eyebrow>Como funciona</Eyebrow>
         <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl leading-tight">Como funciona</h2>
       </div>
       <ol className="relative mt-16 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-1 lg:grid-cols-5 lg:gap-6">
