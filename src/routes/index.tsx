@@ -163,7 +163,7 @@ function Hero() {
 
       <div className="relative mx-auto max-w-6xl grid lg:grid-cols-[1.05fr_1fr] gap-14 lg:gap-10 items-center">
         <div className="text-center lg:text-left">
-          <Eyebrow>Desenho Humano personalizado</Eyebrow>
+          <Eyebrow>Seu Caminho Essencial no Desenho Humano</Eyebrow>
           <h1 className="mt-5 font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-tight text-foreground">
             Caminho <em className="not-italic text-[color:var(--color-petrol)]">Essencial</em>
           </h1>
@@ -176,16 +176,9 @@ function Hero() {
           </p>
 
           <div className="mt-8 space-y-3 text-[15px] leading-relaxed text-muted-foreground max-w-xl mx-auto lg:mx-0">
-            <p>Talvez você já tenha sentido que precisa fazer mais esforço do que as outras pessoas para que as coisas aconteçam.</p>
+            <p>Talvez você já tenha sentido que precisa fazer muito esforço para que as coisas aconteçam.</p>
             <p>Pensa demais antes de decidir. Questiona se está seguindo o caminho certo.</p>
             <p>Tenta se adaptar ao que esperam de você e, mesmo assim, sente que alguma coisa não encaixa.</p>
-          </div>
-
-          <div className="mt-10 flex flex-col sm:flex-row gap-4 items-center lg:items-start justify-center lg:justify-start">
-            <CTA className="w-full sm:w-auto">Quero receber minha análise</CTA>
-            <p className="text-[13px] text-muted-foreground max-w-xs text-center lg:text-left">
-              Análise gravada + PDF personalizado + encontro de tira-dúvidas.
-            </p>
           </div>
         </div>
 
