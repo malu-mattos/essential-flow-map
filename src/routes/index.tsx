@@ -44,7 +44,7 @@ const NAV = [
   { href: "#revelacoes", label: "O que você descobrirá" },
   { href: "#beneficios", label: "Benefícios" },
   { href: "#como-funciona", label: "Como funciona" },
-  { href: "#voce-recebe", label: "O que você recebe" },
+  { href: "#quem-sou", label: "Quem sou" },
   { href: "#faq", label: "Perguntas frequentes" },
 ];
 
