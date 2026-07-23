@@ -737,7 +737,7 @@ function Footer() {
               <span className="font-serif text-lg">Caminho Essencial</span>
             </div>
             <p className="mt-4 text-[13.5px] leading-relaxed text-muted-foreground">
-              [INSERIR nome profissional]
+              by Malu Mattos
             </p>
           </div>
           <div>
@@ -745,7 +745,7 @@ function Footer() {
               Contato
             </h4>
             <ul className="mt-4 space-y-2 text-[14px] text-muted-foreground">
-              <li><a href="#" className="hover:text-foreground transition-colors">Instagram: [INSERIR]</a></li>
+              <li><a href="https://instagram.com/soumalumattos" target="_blank" rel="noreferrer" className="hover:text-foreground transition-colors">Instagram: soumalumattos</a></li>
               <li><a href="#" className="hover:text-foreground transition-colors">WhatsApp: [INSERIR]</a></li>
               <li><a href="#" className="hover:text-foreground transition-colors">E-mail: [INSERIR]</a></li>
             </ul>
