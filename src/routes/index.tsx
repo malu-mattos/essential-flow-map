@@ -360,13 +360,10 @@ function Transformacao() {
           seu favor.
         </p>
       </div>
-
-      <div className="mt-12 flex justify-center">
-        <CTA className="w-full sm:w-auto">Quero fazer minha análise</CTA>
-      </div>
     </Section>
   );
 }
+
 
 function ParaQuem() {
   const items = [
