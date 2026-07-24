@@ -485,17 +485,7 @@ function ComoFunciona() {
 function QuemSou() {
   return (
     <Section id="quem-sou" className="bg-[color:var(--color-surface)]/60">
-      <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-10 lg:gap-14 items-start">
-        <div className="relative lg:sticky lg:top-28 mx-auto w-full max-w-[420px]">
-          <div aria-hidden className="absolute inset-0 -m-6 rounded-[2rem] bg-gradient-to-br from-[color:var(--color-sky)]/40 to-[color:var(--color-mint)]/30 blur-3xl" />
-          <div className="relative rounded-[2rem] overflow-hidden border border-border/60 soft-shadow bg-card">
-            <img
-              src={maluPhoto.url}
-              alt="Malu Mattos"
-              className="w-full h-auto object-contain"
-            />
-          </div>
-        </div>
+      <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-10 lg:gap-14 items-start">
         <div>
           <Eyebrow>Quem sou</Eyebrow>
           <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl leading-tight">
@@ -526,21 +516,24 @@ function QuemSou() {
               ajudando outras pessoas a reconhecerem o próprio funcionamento, seus potenciais e as
               particularidades do seu Desenho.
             </p>
-            <blockquote className="relative rounded-3xl bg-gradient-to-br from-[color:var(--color-mint)]/25 via-card/70 to-[color:var(--color-sky)]/25 border border-[color:var(--color-mint)]/40 p-7 sm:p-8 soft-shadow">
-              <span aria-hidden className="absolute -top-3 left-6 font-serif text-6xl text-[color:var(--color-petrol)]/40 leading-none">“</span>
-              <p className="font-serif text-lg sm:text-xl leading-snug text-foreground italic">
-                Acredito que se conhecer não significa se encaixar em uma definição. Significa
-                reconhecer quem você é, respeitar o seu caminho e viver com mais leveza, presença e
-                curiosidade pelo que de melhor podemos ser.
-              </p>
-            </blockquote>
           </div>
           <div className="mt-10">
             <CTA className="w-full sm:w-auto">Quero fazer minha análise</CTA>
           </div>
         </div>
+        <div className="relative lg:sticky lg:top-28 mx-auto w-full max-w-[420px] order-first lg:order-last">
+          <div aria-hidden className="absolute inset-0 -m-6 rounded-[2rem] bg-gradient-to-br from-[color:var(--color-sky)]/40 to-[color:var(--color-mint)]/30 blur-3xl" />
+          <div className="relative rounded-[2rem] overflow-hidden border border-border/60 soft-shadow bg-card">
+            <img
+              src={maluPhoto.url}
+              alt="Malu Mattos"
+              className="w-full h-auto object-contain"
+            />
+          </div>
+        </div>
       </div>
     </Section>
+
   );
 }
 
