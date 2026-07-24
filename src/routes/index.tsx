@@ -712,9 +712,38 @@ function Footer() {
             <h4 className="text-[13px] uppercase tracking-[0.18em] text-[color:var(--color-olive)] font-medium">
               Contato
             </h4>
-            <ul className="mt-4 space-y-2 text-[14px] text-muted-foreground">
-              <li><a href="https://instagram.com/soumalumattos" target="_blank" rel="noreferrer" className="hover:text-foreground transition-colors">Instagram: soumalumattos</a></li>
+            <ul className="mt-4 space-y-3 text-[14px] text-muted-foreground">
+              <li>
+                <a
+                  href="https://instagram.com/soumalumattos"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 hover:text-foreground transition-colors"
+                >
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 text-[color:var(--color-petrol)]">
+                    <rect x="3" y="3" width="18" height="18" rx="5" />
+                    <circle cx="12" cy="12" r="4" />
+                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                  </svg>
+                  @soumalumattos
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/5511986716236"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 hover:text-foreground transition-colors"
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4 text-[color:var(--color-olive)]">
+                    <path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.9-2.9-1.6-4-3.5-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5H8c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5S7.3 12 7.4 12.2c.1.2 2 3.1 4.9 4.3 1.8.8 2.5.8 3.4.7.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.2-.2-.3-.2z" />
+                    <path d="M20.5 3.5A10 10 0 0 0 3.6 15.3L2 22l6.9-1.8a10 10 0 0 0 4.6 1.2h.1a10 10 0 0 0 6.9-17.9zm-6.9 16.7a8.3 8.3 0 0 1-4.2-1.2l-.3-.2-4.1 1.1 1.1-4-.2-.3a8.3 8.3 0 1 1 7.7 4.6z" />
+                  </svg>
+                  (11) 98671-6236
+                </a>
+              </li>
             </ul>
+
           </div>
           <div>
             <h4 className="text-[13px] uppercase tracking-[0.18em] text-[color:var(--color-olive)] font-medium">
