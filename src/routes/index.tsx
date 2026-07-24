@@ -529,7 +529,7 @@ function QuemSou() {
             <CTA className="w-full sm:w-auto">Quero fazer minha análise</CTA>
           </div>
         </div>
-        <div className="relative lg:sticky lg:top-28 mx-auto w-full max-w-[420px] order-first lg:order-last">
+        <div className="relative md:sticky md:top-28 mx-auto w-full max-w-[420px] order-first md:order-last">
           <div aria-hidden className="absolute inset-0 -m-6 rounded-[2rem] bg-gradient-to-br from-[color:var(--color-sky)]/40 to-[color:var(--color-mint)]/30 blur-3xl" />
           <div className="relative rounded-[2rem] overflow-hidden border border-border/60 soft-shadow bg-card">
             <img
