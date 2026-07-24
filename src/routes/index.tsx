@@ -680,7 +680,7 @@ function FinalSection() {
       </div>
 
       <div className="relative mx-auto max-w-3xl text-center">
-        <img src={logoAsset.url} alt="" className="mx-auto h-16 w-16 opacity-90" />
+        <img src={logoAsset.url} alt="" className="mx-auto h-20 w-auto opacity-90" />
         <h2 className="mt-8 font-serif text-3xl sm:text-4xl lg:text-5xl leading-[1.15]">
           Você não precisa continuar tentando funcionar como todo mundo.
         </h2>
