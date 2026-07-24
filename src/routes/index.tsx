@@ -165,32 +165,20 @@ function Hero() {
       <div aria-hidden className="pointer-events-none absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full border border-[color:var(--color-mint)]/30" />
       <div aria-hidden className="pointer-events-none absolute -bottom-52 -right-40 h-[600px] w-[600px] rounded-full border border-[color:var(--color-petrol)]/25" />
 
-      <div className="relative mx-auto max-w-6xl grid lg:grid-cols-[1.05fr_1fr] gap-14 lg:gap-12 items-center">
-        <div className="text-center lg:text-left">
-          <Eyebrow>Seu Caminho Essencial no Desenho Humano</Eyebrow>
-          <h1 className="mt-5 font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-tight text-foreground">
-            Caminho <span className="text-[color:var(--color-petrol)]">Essencial</span>
-          </h1>
-          <p className="mt-8 font-serif text-2xl sm:text-3xl lg:text-[2.15rem] leading-tight text-foreground">
-            Descubra como você foi naturalmente desenhada para viver.
-          </p>
-          <p className="mt-5 font-serif italic text-lg sm:text-xl text-foreground/80 leading-relaxed max-w-xl mx-auto lg:mx-0">
-            Compreenda sua energia, tome decisões com mais confiança e viva com menos resistência,
-            mais leveza e magnetismo.
-          </p>
-        </div>
-
-        <div className="relative mx-auto w-full max-w-[520px]">
-          <div aria-hidden className="absolute inset-0 -m-8 rounded-full bg-gradient-to-br from-[color:var(--color-sky)]/40 via-transparent to-[color:var(--color-mint)]/30 blur-3xl" />
-          <div className="relative rounded-[2.5rem] overflow-hidden border border-border/50 soft-shadow aspect-[4/5]">
-            <img
-              src={waterAsset.url}
-              alt="Águas calmas — símbolo de fluidez e presença"
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </div>
+      <div className="relative mx-auto max-w-3xl text-center">
+        <Eyebrow>Seu Caminho Essencial no Desenho Humano</Eyebrow>
+        <h1 className="mt-5 font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-tight text-foreground">
+          Caminho <span className="text-[color:var(--color-petrol)]">Essencial</span>
+        </h1>
+        <p className="mt-8 font-serif text-2xl sm:text-3xl lg:text-[2.15rem] leading-tight text-foreground">
+          Descubra como você foi naturalmente desenhada para viver.
+        </p>
+        <p className="mt-5 font-serif italic text-lg sm:text-xl text-foreground/80 leading-relaxed max-w-xl mx-auto">
+          Compreenda sua energia, tome decisões com mais confiança e viva com menos resistência,
+          mais leveza e magnetismo.
+        </p>
       </div>
+
 
       {/* intro follow-up block */}
       <div className="relative mx-auto max-w-3xl mt-20 sm:mt-24">
