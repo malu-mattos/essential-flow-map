@@ -761,7 +761,7 @@ function Footer() {
             não substitui acompanhamento médico, psicológico, terapêutico ou qualquer outro atendimento
             profissional.
           </p>
-          <p>© {new Date().getFullYear()} Caminho Essencial. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} Malu Mattos. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
