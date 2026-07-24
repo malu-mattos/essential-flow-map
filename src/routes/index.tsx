@@ -14,7 +14,7 @@ import {
   ChevronIcon,
 } from "@/components/ce/icons";
 
-const CHECKOUT_URL = "#checkout"; // [INSERIR LINK DO CHECKOUT]
+const CHECKOUT_URL = "https://caminhoessencial.malumattos.com.br/";
 
 export const Route = createFileRoute("/")({
   head: () => ({
