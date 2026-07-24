@@ -539,12 +539,12 @@ function QuemSou() {
 
 function Investimento() {
   const bullets = [
-    "análise personalizada",
-    "Análise gravada",
+    "Análise personalizada gravada",
     "PDF com as principais chaves",
     "Encontro para esclarecer dúvidas",
     "Entrega em até 15 dias",
   ];
+
   return (
     <Section id="investimento" spacing="tight">
       <div className="mx-auto max-w-2xl">
