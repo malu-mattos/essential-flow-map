@@ -446,40 +446,38 @@ function ComoFunciona() {
           Sua jornada no Caminho Essencial
         </h2>
       </div>
-      <ol className="mt-14 grid gap-6 md:grid-cols-2">
+      <ol className="mt-14 max-w-3xl mx-auto space-y-10">
         {steps.map((s, i) => (
-          <li
-            key={i}
-            className="relative rounded-3xl bg-card border border-border/60 p-8 soft-shadow flex flex-col"
-          >
-            <div className="flex items-center gap-4">
-              <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-[color:var(--color-sky)]/50 to-[color:var(--color-mint)]/40 font-serif text-lg text-[color:var(--color-petrol)] shrink-0">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <h3 className="font-serif text-xl text-foreground">{s.title}</h3>
+          <li key={i} className="flex gap-5 sm:gap-6">
+            <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[color:var(--color-sky)]/50 to-[color:var(--color-mint)]/40 font-serif text-base text-[color:var(--color-petrol)]">
+              {String(i + 1).padStart(2, "0")}
+            </span>
+            <div className="flex-1 pt-1.5">
+              <h3 className="font-serif text-xl sm:text-2xl text-foreground">{s.title}</h3>
+              <p className="mt-3 text-[15.5px] leading-relaxed text-muted-foreground">{s.body}</p>
+              {s.intro && (
+                <p className="mt-2 text-[15.5px] leading-relaxed text-muted-foreground">{s.intro}</p>
+              )}
+              {s.list && (
+                <ul className="mt-3 space-y-1.5 text-[15px] text-muted-foreground">
+                  {s.list.map((l, j) => (
+                    <li key={j} className="flex gap-2">
+                      <span className="text-[color:var(--color-olive)]">•</span>
+                      <span>{l}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {s.footer && (
+                <p className="mt-3 text-[14.5px] leading-relaxed text-foreground/75 italic">
+                  {s.footer}
+                </p>
+              )}
             </div>
-            <p className="mt-5 text-[15px] leading-relaxed text-muted-foreground">{s.body}</p>
-            {s.intro && (
-              <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">{s.intro}</p>
-            )}
-            {s.list && (
-              <ul className="mt-3 space-y-1.5 text-[14.5px] text-muted-foreground">
-                {s.list.map((l, j) => (
-                  <li key={j} className="flex gap-2">
-                    <span className="text-[color:var(--color-olive)]">•</span>
-                    <span>{l}</span>
-                  </li>
-                ))}
-              </ul>
-            )}
-            {s.footer && (
-              <p className="mt-4 text-[14px] leading-relaxed text-foreground/75 italic border-t border-border/50 pt-3">
-                {s.footer}
-              </p>
-            )}
           </li>
         ))}
       </ol>
+
     </Section>
   );
 }
