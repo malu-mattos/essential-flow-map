@@ -493,7 +493,7 @@ function ComoFunciona() {
 function QuemSou() {
   return (
     <Section id="quem-sou" className="bg-[color:var(--color-surface)]/60">
-      <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-10 lg:gap-14 items-start">
+      <div className="grid md:grid-cols-[1.15fr_0.85fr] gap-10 md:gap-12 items-start">
         <div>
           <Eyebrow>Quem sou</Eyebrow>
           <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl leading-tight">
