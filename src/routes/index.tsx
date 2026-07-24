@@ -166,8 +166,7 @@ function Hero() {
       <div aria-hidden className="pointer-events-none absolute -bottom-52 -right-40 h-[600px] w-[600px] rounded-full border border-[color:var(--color-petrol)]/25" />
 
       <div className="relative mx-auto max-w-3xl text-center">
-        <Eyebrow>Seu Caminho Essencial no Desenho Humano</Eyebrow>
-        <h1 className="mt-5 font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-tight text-foreground">
+        <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-tight text-foreground">
           Caminho <span className="text-[color:var(--color-petrol)]">Essencial</span>
         </h1>
         <p className="mt-8 font-serif text-2xl sm:text-3xl lg:text-[2.15rem] leading-tight text-foreground">
@@ -183,7 +182,7 @@ function Hero() {
       {/* intro follow-up block */}
       <div className="relative mx-auto max-w-3xl mt-20 sm:mt-24">
         <div className="divider-fade w-40 mx-auto mb-8" />
-        <div className="rounded-3xl bg-card/80 border border-border/60 backdrop-blur-sm soft-shadow p-8 sm:p-12 space-y-5 text-[16px] sm:text-[17px] leading-relaxed text-muted-foreground">
+        <div className="space-y-5 text-center text-[16px] sm:text-[17px] leading-relaxed text-muted-foreground px-2">
           <p>
             Talvez você já tenha sentido que precisa fazer muito esforço para que as coisas aconteçam.
           </p>
@@ -205,29 +204,37 @@ function Hero() {
         </div>
 
         {/* O que é */}
-        <div className="mt-10 rounded-3xl bg-gradient-to-br from-[color:var(--color-mint)]/20 via-card/60 to-[color:var(--color-sky)]/25 border border-border/50 backdrop-blur-sm p-8 sm:p-12 space-y-5">
-          <Eyebrow>O que é o Desenho Humano</Eyebrow>
-          <div className="space-y-4 text-[16px] leading-relaxed text-muted-foreground">
-            <p>
-              O Desenho Humano é um sistema de autoconhecimento que revela o seu jeito único de funcionar.
-            </p>
-            <p>
-              Ele mostra que não existe uma fórmula capaz de servir igualmente para todas as pessoas. O que
-              fortalece uma pode esgotar outra. O que traz clareza para alguém pode gerar ainda mais dúvida
-              em você.
-            </p>
-            <p className="font-serif italic text-lg text-foreground/85">
-              Cada Desenho é único porque cada pessoa também é.
-            </p>
-            <p>
-              Ao conhecer o seu, você começa a reconhecer os talentos, os ritmos e as particularidades que
-              já fazem parte de você. E percebe que muitas das características que tentou mudar podem ser
-              justamente os recursos que vieram para ajudá-la a viver melhor.
-            </p>
-            <p className="text-foreground/90">
-              Você não precisa se tornar outra pessoa para viver uma vida mais leve. Precisa conhecer melhor
-              quem já é.
-            </p>
+        <div className="relative mt-14 rounded-3xl bg-gradient-to-br from-[color:var(--color-mint)]/20 via-card/60 to-[color:var(--color-sky)]/25 border border-border/50 backdrop-blur-sm p-8 sm:p-12 overflow-hidden">
+          <img
+            src={logoAsset.url}
+            alt=""
+            aria-hidden
+            className="pointer-events-none select-none absolute -right-16 -bottom-16 sm:-right-24 sm:-bottom-24 h-72 w-72 sm:h-96 sm:w-96 opacity-15"
+          />
+          <div className="relative text-center max-w-2xl mx-auto space-y-5">
+            <Eyebrow>O que é o Desenho Humano</Eyebrow>
+            <div className="space-y-4 text-[16px] leading-relaxed text-muted-foreground">
+              <p>
+                O Desenho Humano é um sistema de autoconhecimento que revela o seu jeito único de funcionar.
+              </p>
+              <p>
+                Ele mostra que não existe uma fórmula capaz de servir igualmente para todas as pessoas. O que
+                fortalece uma pode esgotar outra. O que traz clareza para alguém pode gerar ainda mais dúvida
+                em você.
+              </p>
+              <p className="font-serif italic text-lg text-foreground/85">
+                Cada Desenho é único porque cada pessoa também é.
+              </p>
+              <p>
+                Ao conhecer o seu, você começa a reconhecer os talentos, os ritmos e as particularidades que
+                já fazem parte de você. E percebe que muitas das características que tentou mudar podem ser
+                justamente os recursos que vieram para ajudá-la a viver melhor.
+              </p>
+              <p className="font-semibold text-foreground">
+                Você não precisa se tornar outra pessoa para viver uma vida mais leve. Precisa conhecer melhor
+                quem já é.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -235,6 +242,7 @@ function Hero() {
 
   );
 }
+
 
 function Revelacoes() {
   const cards = [
