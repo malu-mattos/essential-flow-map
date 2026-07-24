@@ -181,7 +181,7 @@ function Hero() {
 
         <div className="relative mx-auto w-full max-w-[520px]">
           <div aria-hidden className="absolute inset-0 -m-8 rounded-full bg-gradient-to-br from-[color:var(--color-sky)]/40 via-transparent to-[color:var(--color-mint)]/30 blur-3xl" />
-          <EnergyOrb className="relative w-full h-auto" />
+          <img src={logoAsset.url} alt="Caminho Essencial" className="relative w-full h-auto" />
         </div>
       </div>
 
