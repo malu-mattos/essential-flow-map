@@ -709,7 +709,7 @@ function Footer() {
         <div className="grid md:grid-cols-3 gap-10">
           <div>
             <div className="flex items-center gap-2.5">
-              <img src={logoAsset.url} alt="Caminho Essencial" className="h-10 w-10" />
+              <img src={logoAsset.url} alt="Caminho Essencial" className="h-10 w-auto" />
               <span className="font-serif text-lg">Caminho Essencial</span>
             </div>
             <p className="mt-4 text-[13.5px] leading-relaxed text-muted-foreground">
