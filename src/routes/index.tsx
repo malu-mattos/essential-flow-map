@@ -230,9 +230,8 @@ function Hero() {
             </p>
           </div>
         </div>
+      </div>
 
-        <div className="mt-10 flex justify-center">
-          <CTA className="w-full sm:w-auto">Quero receber minha análise</CTA>
         </div>
       </div>
     </section>
