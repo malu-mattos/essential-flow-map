@@ -778,7 +778,7 @@ function Footer() {
 
 function MobileStickyCTA() {
   return (
-    <div className="lg:hidden fixed bottom-4 inset-x-4 z-30">
+    <div className="fixed bottom-4 inset-x-4 lg:inset-x-auto lg:right-6 lg:bottom-6 z-30 flex lg:justify-end">
       <a
         href={CHECKOUT_URL}
         className="flex items-center justify-center gap-2 w-full rounded-full bg-primary text-primary-foreground text-sm font-medium px-6 py-3.5 shadow-[0_16px_40px_-12px_rgba(107,161,175,0.55)] backdrop-blur"
