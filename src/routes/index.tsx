@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import logoAsset from "@/assets/caminho-essencial-symbol.png.asset.json";
 import fullLogoAsset from "@/assets/caminho-essencial-full-logo.png.asset.json";
-import waterAsset from "@/assets/aguas-calmas.jpg.asset.json";
+
 import maluPhoto from "@/assets/malu-mattos.jpg.asset.json";
 import {
   EnergyIcon,
@@ -165,32 +165,20 @@ function Hero() {
       <div aria-hidden className="pointer-events-none absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full border border-[color:var(--color-mint)]/30" />
       <div aria-hidden className="pointer-events-none absolute -bottom-52 -right-40 h-[600px] w-[600px] rounded-full border border-[color:var(--color-petrol)]/25" />
 
-      <div className="relative mx-auto max-w-6xl grid lg:grid-cols-[1.05fr_1fr] gap-14 lg:gap-12 items-center">
-        <div className="text-center lg:text-left">
-          <Eyebrow>Seu Caminho Essencial no Desenho Humano</Eyebrow>
-          <h1 className="mt-5 font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-tight text-foreground">
-            Caminho <span className="text-[color:var(--color-petrol)]">Essencial</span>
-          </h1>
-          <p className="mt-8 font-serif text-2xl sm:text-3xl lg:text-[2.15rem] leading-tight text-foreground">
-            Descubra como você foi naturalmente desenhada para viver.
-          </p>
-          <p className="mt-5 font-serif italic text-lg sm:text-xl text-foreground/80 leading-relaxed max-w-xl mx-auto lg:mx-0">
-            Compreenda sua energia, tome decisões com mais confiança e viva com menos resistência,
-            mais leveza e magnetismo.
-          </p>
-        </div>
-
-        <div className="relative mx-auto w-full max-w-[520px]">
-          <div aria-hidden className="absolute inset-0 -m-8 rounded-full bg-gradient-to-br from-[color:var(--color-sky)]/40 via-transparent to-[color:var(--color-mint)]/30 blur-3xl" />
-          <div className="relative rounded-[2.5rem] overflow-hidden border border-border/50 soft-shadow aspect-[4/5]">
-            <img
-              src={waterAsset.url}
-              alt="Águas calmas — símbolo de fluidez e presença"
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </div>
+      <div className="relative mx-auto max-w-3xl text-center">
+        <Eyebrow>Seu Caminho Essencial no Desenho Humano</Eyebrow>
+        <h1 className="mt-5 font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-tight text-foreground">
+          Caminho <span className="text-[color:var(--color-petrol)]">Essencial</span>
+        </h1>
+        <p className="mt-8 font-serif text-2xl sm:text-3xl lg:text-[2.15rem] leading-tight text-foreground">
+          Descubra como você foi naturalmente desenhada para viver.
+        </p>
+        <p className="mt-5 font-serif italic text-lg sm:text-xl text-foreground/80 leading-relaxed max-w-xl mx-auto">
+          Compreenda sua energia, tome decisões com mais confiança e viva com menos resistência,
+          mais leveza e magnetismo.
+        </p>
       </div>
+
 
       {/* intro follow-up block */}
       <div className="relative mx-auto max-w-3xl mt-20 sm:mt-24">
@@ -242,12 +230,9 @@ function Hero() {
             </p>
           </div>
         </div>
-
-        <div className="mt-10 flex justify-center">
-          <CTA className="w-full sm:w-auto">Quero receber minha análise</CTA>
-        </div>
       </div>
     </section>
+
   );
 }
 
@@ -375,13 +360,10 @@ function Transformacao() {
           seu favor.
         </p>
       </div>
-
-      <div className="mt-12 flex justify-center">
-        <CTA className="w-full sm:w-auto">Quero fazer minha análise</CTA>
-      </div>
     </Section>
   );
 }
+
 
 function ParaQuem() {
   const items = [
@@ -464,40 +446,38 @@ function ComoFunciona() {
           Sua jornada no Caminho Essencial
         </h2>
       </div>
-      <ol className="mt-14 grid gap-6 md:grid-cols-2">
+      <ol className="mt-14 max-w-3xl mx-auto space-y-10">
         {steps.map((s, i) => (
-          <li
-            key={i}
-            className="relative rounded-3xl bg-card border border-border/60 p-8 soft-shadow flex flex-col"
-          >
-            <div className="flex items-center gap-4">
-              <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-[color:var(--color-sky)]/50 to-[color:var(--color-mint)]/40 font-serif text-lg text-[color:var(--color-petrol)] shrink-0">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <h3 className="font-serif text-xl text-foreground">{s.title}</h3>
+          <li key={i} className="flex gap-5 sm:gap-6">
+            <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[color:var(--color-sky)]/50 to-[color:var(--color-mint)]/40 font-serif text-base text-[color:var(--color-petrol)]">
+              {String(i + 1).padStart(2, "0")}
+            </span>
+            <div className="flex-1 pt-1.5">
+              <h3 className="font-serif text-xl sm:text-2xl text-foreground">{s.title}</h3>
+              <p className="mt-3 text-[15.5px] leading-relaxed text-muted-foreground">{s.body}</p>
+              {s.intro && (
+                <p className="mt-2 text-[15.5px] leading-relaxed text-muted-foreground">{s.intro}</p>
+              )}
+              {s.list && (
+                <ul className="mt-3 space-y-1.5 text-[15px] text-muted-foreground">
+                  {s.list.map((l, j) => (
+                    <li key={j} className="flex gap-2">
+                      <span className="text-[color:var(--color-olive)]">•</span>
+                      <span>{l}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {s.footer && (
+                <p className="mt-3 text-[14.5px] leading-relaxed text-foreground/75 italic">
+                  {s.footer}
+                </p>
+              )}
             </div>
-            <p className="mt-5 text-[15px] leading-relaxed text-muted-foreground">{s.body}</p>
-            {s.intro && (
-              <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">{s.intro}</p>
-            )}
-            {s.list && (
-              <ul className="mt-3 space-y-1.5 text-[14.5px] text-muted-foreground">
-                {s.list.map((l, j) => (
-                  <li key={j} className="flex gap-2">
-                    <span className="text-[color:var(--color-olive)]">•</span>
-                    <span>{l}</span>
-                  </li>
-                ))}
-              </ul>
-            )}
-            {s.footer && (
-              <p className="mt-4 text-[14px] leading-relaxed text-foreground/75 italic border-t border-border/50 pt-3">
-                {s.footer}
-              </p>
-            )}
           </li>
         ))}
       </ol>
+
     </Section>
   );
 }
@@ -505,17 +485,7 @@ function ComoFunciona() {
 function QuemSou() {
   return (
     <Section id="quem-sou" className="bg-[color:var(--color-surface)]/60">
-      <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-10 lg:gap-14 items-start">
-        <div className="relative lg:sticky lg:top-28 mx-auto w-full max-w-[420px]">
-          <div aria-hidden className="absolute inset-0 -m-6 rounded-[2rem] bg-gradient-to-br from-[color:var(--color-sky)]/40 to-[color:var(--color-mint)]/30 blur-3xl" />
-          <div className="relative rounded-[2rem] overflow-hidden border border-border/60 soft-shadow bg-card">
-            <img
-              src={maluPhoto.url}
-              alt="Malu Mattos"
-              className="w-full h-auto object-contain"
-            />
-          </div>
-        </div>
+      <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-10 lg:gap-14 items-start">
         <div>
           <Eyebrow>Quem sou</Eyebrow>
           <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl leading-tight">
@@ -546,32 +516,35 @@ function QuemSou() {
               ajudando outras pessoas a reconhecerem o próprio funcionamento, seus potenciais e as
               particularidades do seu Desenho.
             </p>
-            <blockquote className="relative rounded-3xl bg-gradient-to-br from-[color:var(--color-mint)]/25 via-card/70 to-[color:var(--color-sky)]/25 border border-[color:var(--color-mint)]/40 p-7 sm:p-8 soft-shadow">
-              <span aria-hidden className="absolute -top-3 left-6 font-serif text-6xl text-[color:var(--color-petrol)]/40 leading-none">“</span>
-              <p className="font-serif text-lg sm:text-xl leading-snug text-foreground italic">
-                Acredito que se conhecer não significa se encaixar em uma definição. Significa
-                reconhecer quem você é, respeitar o seu caminho e viver com mais leveza, presença e
-                curiosidade pelo que de melhor podemos ser.
-              </p>
-            </blockquote>
           </div>
           <div className="mt-10">
             <CTA className="w-full sm:w-auto">Quero fazer minha análise</CTA>
           </div>
         </div>
+        <div className="relative lg:sticky lg:top-28 mx-auto w-full max-w-[420px] order-first lg:order-last">
+          <div aria-hidden className="absolute inset-0 -m-6 rounded-[2rem] bg-gradient-to-br from-[color:var(--color-sky)]/40 to-[color:var(--color-mint)]/30 blur-3xl" />
+          <div className="relative rounded-[2rem] overflow-hidden border border-border/60 soft-shadow bg-card">
+            <img
+              src={maluPhoto.url}
+              alt="Malu Mattos"
+              className="w-full h-auto object-contain"
+            />
+          </div>
+        </div>
       </div>
     </Section>
+
   );
 }
 
 function Investimento() {
   const bullets = [
-    "análise personalizada",
-    "Análise gravada",
+    "Análise personalizada gravada",
     "PDF com as principais chaves",
     "Encontro para esclarecer dúvidas",
     "Entrega em até 15 dias",
   ];
+
   return (
     <Section id="investimento" spacing="tight">
       <div className="mx-auto max-w-2xl">
@@ -739,9 +712,38 @@ function Footer() {
             <h4 className="text-[13px] uppercase tracking-[0.18em] text-[color:var(--color-olive)] font-medium">
               Contato
             </h4>
-            <ul className="mt-4 space-y-2 text-[14px] text-muted-foreground">
-              <li><a href="https://instagram.com/soumalumattos" target="_blank" rel="noreferrer" className="hover:text-foreground transition-colors">Instagram: soumalumattos</a></li>
+            <ul className="mt-4 space-y-3 text-[14px] text-muted-foreground">
+              <li>
+                <a
+                  href="https://instagram.com/soumalumattos"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 hover:text-foreground transition-colors"
+                >
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 text-[color:var(--color-petrol)]">
+                    <rect x="3" y="3" width="18" height="18" rx="5" />
+                    <circle cx="12" cy="12" r="4" />
+                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                  </svg>
+                  @soumalumattos
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/5511986716236"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 hover:text-foreground transition-colors"
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4 text-[color:var(--color-olive)]">
+                    <path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.9-2.9-1.6-4-3.5-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5H8c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5S7.3 12 7.4 12.2c.1.2 2 3.1 4.9 4.3 1.8.8 2.5.8 3.4.7.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.2-.2-.3-.2z" />
+                    <path d="M20.5 3.5A10 10 0 0 0 3.6 15.3L2 22l6.9-1.8a10 10 0 0 0 4.6 1.2h.1a10 10 0 0 0 6.9-17.9zm-6.9 16.7a8.3 8.3 0 0 1-4.2-1.2l-.3-.2-4.1 1.1 1.1-4-.2-.3a8.3 8.3 0 1 1 7.7 4.6z" />
+                  </svg>
+                  (11) 98671-6236
+                </a>
+              </li>
             </ul>
+
           </div>
           <div>
             <h4 className="text-[13px] uppercase tracking-[0.18em] text-[color:var(--color-olive)] font-medium">
@@ -759,7 +761,7 @@ function Footer() {
             não substitui acompanhamento médico, psicológico, terapêutico ou qualquer outro atendimento
             profissional.
           </p>
-          <p>© {new Date().getFullYear()} Caminho Essencial. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} Malu Mattos. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
