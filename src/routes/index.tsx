@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import logoAsset from "@/assets/caminho-essencial-symbol.png.asset.json";
-import fullLogoAsset from "@/assets/caminho-essencial-full-logo.png.asset.json";
 
 import maluPhoto from "@/assets/malu-mattos.jpg.asset.json";
 import {
