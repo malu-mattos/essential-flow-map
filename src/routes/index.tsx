@@ -68,65 +68,6 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
   );
 }
 
-function Header() {
-  const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-  return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        scrolled ? "backdrop-blur-xl bg-background/70 border-b border-border/60" : "bg-transparent"
-      }`}
-    >
-      <div className="mx-auto max-w-6xl px-5 sm:px-8 h-16 sm:h-20 flex items-center justify-between gap-4">
-        <a href="#top" className="flex items-center gap-2.5 min-w-0" aria-label="Caminho Essencial">
-          <img
-            src={fullLogoAsset.url}
-            alt="Caminho Essencial"
-            className="h-11 sm:h-14 w-auto object-contain shrink-0"
-          />
-        </a>
-        <nav className="hidden lg:flex items-center gap-7">
-          {NAV.map((n) => (
-            <a key={n.href} href={n.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              {n.label}
-            </a>
-          ))}
-        </nav>
-        <div className="flex items-center gap-2">
-          <CTA className="hidden sm:inline-flex !py-2.5 !px-5 text-[13px]">Quero minha análise</CTA>
-          <button
-            onClick={() => setOpen((v) => !v)}
-            className="lg:hidden p-2 rounded-md text-foreground hover:bg-surface"
-            aria-label="Abrir menu"
-            aria-expanded={open}
-          >
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
-              {open ? <path d="M6 6l12 12M18 6L6 18" /> : <><path d="M4 7h16" /><path d="M4 12h16" /><path d="M4 17h16" /></>}
-            </svg>
-          </button>
-        </div>
-      </div>
-      {open && (
-        <div className="lg:hidden border-t border-border/60 bg-background/95 backdrop-blur-xl">
-          <div className="px-5 py-4 flex flex-col gap-3">
-            {NAV.map((n) => (
-              <a key={n.href} href={n.href} onClick={() => setOpen(false)} className="text-sm text-muted-foreground py-1.5">
-                {n.label}
-              </a>
-            ))}
-            <CTA className="mt-2 self-start sm:hidden">Quero minha análise</CTA>
-          </div>
-        </div>
-      )}
-    </header>
-  );
-}
 
 function Hero() {
   return (
@@ -671,79 +612,6 @@ function FinalSection() {
   );
 }
 
-function Footer() {
-  return (
-    <footer className="border-t border-border/60 bg-background">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8 py-14">
-        <div className="grid md:grid-cols-3 gap-10">
-          <div>
-            <div className="flex items-center gap-2.5">
-              <img src={logoAsset.url} alt="Caminho Essencial" className="h-10 w-auto" />
-              <span className="font-serif text-lg">Caminho Essencial</span>
-            </div>
-            <p className="mt-4 text-[13.5px] leading-relaxed text-muted-foreground">
-              by Malu Mattos
-            </p>
-          </div>
-          <div>
-            <h4 className="text-[13px] uppercase tracking-[0.18em] text-[color:var(--color-olive)] font-medium">
-              Contato
-            </h4>
-            <ul className="mt-4 space-y-3 text-[14px] text-muted-foreground">
-              <li>
-                <a
-                  href="https://instagram.com/soumalumattos"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 hover:text-foreground transition-colors"
-                >
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 text-[color:var(--color-petrol)]">
-                    <rect x="3" y="3" width="18" height="18" rx="5" />
-                    <circle cx="12" cy="12" r="4" />
-                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-                  </svg>
-                  @soumalumattos
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://wa.me/5511986716236"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 hover:text-foreground transition-colors"
-                >
-                  <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4 text-[color:var(--color-olive)]">
-                    <path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.9-2.9-1.6-4-3.5-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5H8c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5S7.3 12 7.4 12.2c.1.2 2 3.1 4.9 4.3 1.8.8 2.5.8 3.4.7.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.2-.2-.3-.2z" />
-                    <path d="M20.5 3.5A10 10 0 0 0 3.6 15.3L2 22l6.9-1.8a10 10 0 0 0 4.6 1.2h.1a10 10 0 0 0 6.9-17.9zm-6.9 16.7a8.3 8.3 0 0 1-4.2-1.2l-.3-.2-4.1 1.1 1.1-4-.2-.3a8.3 8.3 0 1 1 7.7 4.6z" />
-                  </svg>
-                  (11) 98671-6236
-                </a>
-              </li>
-            </ul>
-
-          </div>
-          <div>
-            <h4 className="text-[13px] uppercase tracking-[0.18em] text-[color:var(--color-olive)] font-medium">
-              Legal
-            </h4>
-            <ul className="mt-4 space-y-2 text-[14px] text-muted-foreground">
-              <li><a href="#" className="hover:text-foreground transition-colors">Política de Privacidade</a></li>
-              <li><a href="#" className="hover:text-foreground transition-colors">Termos de Uso</a></li>
-            </ul>
-          </div>
-        </div>
-        <div className="mt-10 pt-8 border-t border-border/60 text-[12.5px] leading-relaxed text-muted-foreground space-y-3">
-          <p className="italic">
-            O Desenho Humano é apresentado nesta página como uma ferramenta de autoconhecimento e
-            não substitui acompanhamento médico, psicológico, terapêutico ou qualquer outro atendimento
-            profissional.
-          </p>
-          <p>© {new Date().getFullYear()} Malu Mattos. Todos os direitos reservados.</p>
-        </div>
-      </div>
-    </footer>
-  );
-}
 
 function MobileStickyCTA() {
   return (
@@ -761,7 +629,7 @@ function MobileStickyCTA() {
 function LandingPage() {
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-[color:var(--color-mint)]/40">
-      <Header />
+      <SiteHeader />
       <main>
         <Hero />
         <Revelacoes />
@@ -773,7 +641,7 @@ function LandingPage() {
         <Faq />
         <FinalSection />
       </main>
-      <Footer />
+      <SiteFooter />
       <MobileStickyCTA />
     </div>
   );
