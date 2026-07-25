@@ -13,8 +13,10 @@ import {
   CheckIcon,
   ChevronIcon,
 } from "@/components/ce/icons";
-
-const CHECKOUT_URL = "https://caminhoessencial.malumattos.com.br/";
+import { CTA } from "@/components/ce/CTA";
+import { SiteHeader } from "@/components/ce/SiteHeader";
+import { SiteFooter } from "@/components/ce/SiteFooter";
+import { CHECKOUT_URL } from "@/lib/constants";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -37,39 +39,6 @@ export const Route = createFileRoute("/")({
   }),
   component: LandingPage,
 });
-
-const NAV = [
-  { href: "#chaves", label: "As chaves do seu mapa" },
-  { href: "#transformacao", label: "O que muda" },
-  { href: "#para-quem", label: "Para quem é" },
-  { href: "#como-funciona", label: "Sua jornada" },
-  { href: "#quem-sou", label: "Quem sou" },
-  { href: "#faq", label: "Perguntas frequentes" },
-];
-
-function CTA({
-  children,
-  variant = "primary",
-  className = "",
-  ariaLabel,
-}: {
-  children: React.ReactNode;
-  variant?: "primary" | "ghost";
-  className?: string;
-  ariaLabel?: string;
-}) {
-  const base =
-    "inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-medium tracking-wide transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:ring-primary";
-  const styles =
-    variant === "primary"
-      ? "bg-primary text-primary-foreground hover:bg-[#5a8f9d] hover:shadow-[0_12px_30px_-12px_rgba(107,161,175,0.55)] active:scale-[0.98]"
-      : "border border-border text-foreground/80 hover:text-foreground hover:border-primary/50";
-  return (
-    <a href={CHECKOUT_URL} aria-label={ariaLabel} className={`${base} ${styles} ${className}`}>
-      {children}
-    </a>
-  );
-}
 
 function Section({
   id,
