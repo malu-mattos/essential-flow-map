@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import logoAsset from "@/assets/caminho-essencial-symbol.png.asset.json";
 import maluPhoto from "@/assets/malu-mattos.jpg.asset.json";
 import {
   EnergyIcon,
@@ -16,7 +15,6 @@ import {
 } from "@/components/ce/icons";
 import { CTA } from "@/components/ce/CTA";
 import { SiteHeader } from "@/components/ce/SiteHeader";
-import { SiteFooter } from "@/components/ce/SiteFooter";
 import { CHECKOUT_URL } from "@/lib/constants";
 
 export const Route = createFileRoute("/")({
@@ -110,12 +108,6 @@ function OQueE() {
   return (
     <Section id="o-que-e">
       <div className="relative max-w-3xl mx-auto text-center">
-        <img
-          src={logoAsset.url}
-          alt=""
-          aria-hidden
-          className="pointer-events-none select-none absolute -right-20 -bottom-20 sm:-right-32 sm:-bottom-32 h-64 w-64 sm:h-80 sm:w-80 opacity-10"
-        />
         <div className="relative">
           <Eyebrow>O que é</Eyebrow>
           <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl leading-tight">
@@ -444,9 +436,13 @@ function Investimento() {
           <div className="relative">
             <Eyebrow>Investimento</Eyebrow>
             <h2 className="mt-4 font-serif text-3xl sm:text-4xl">Caminho Essencial</h2>
-            <div className="mt-8 flex flex-col items-center gap-1">
-              <span className="font-serif text-xl text-foreground/80">12x de R$ 35,68</span>
-              <span className="font-serif text-lg text-muted-foreground">à vista R$ 347,00</span>
+            <div className="mt-8 flex flex-col items-center gap-2">
+              <span className="font-serif text-5xl sm:text-6xl leading-none tracking-tight text-foreground">
+                12x de R$ 35,68
+              </span>
+              <span className="text-[15px] sm:text-base text-muted-foreground">
+                ou R$ 347,00 à vista
+              </span>
             </div>
 
             <ul className="mt-8 flex flex-col items-center gap-2 text-[14.5px] text-muted-foreground">
@@ -563,11 +559,13 @@ function FinalSection() {
             O seu Desenho ajuda você a reconhecer os recursos que já existem em você e a usá-los com mais confiança.
           </p>
         </div>
-        <p className="mt-10 font-serif text-xl sm:text-2xl text-foreground">
-          Caminho Essencial — 12x de R$ 35,68
-          <br />
-          <span className="text-[color:var(--color-petrol)]">à vista R$ 347,00</span>
+        <p className="mt-10 text-[11px] font-medium uppercase tracking-[0.22em] text-[color:var(--color-olive)]">
+          Caminho Essencial
         </p>
+        <p className="mt-3 font-serif text-4xl sm:text-5xl leading-none tracking-tight text-foreground">
+          12x de R$ 35,68
+        </p>
+        <p className="mt-2 text-[15px] sm:text-base text-muted-foreground">ou R$ 347,00 à vista</p>
         <div className="mt-8">
           <CTA className="w-full sm:w-auto">Quero conhecer o meu Desenho Humano</CTA>
         </div>
@@ -606,7 +604,6 @@ function LandingPage() {
         <FinalSection />
         <Faq />
       </main>
-      <SiteFooter />
       <MobileStickyCTA />
     </div>
   );
