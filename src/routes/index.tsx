@@ -561,11 +561,13 @@ function FinalSection() {
             O seu Desenho ajuda você a reconhecer os recursos que já existem em você e a usá-los com mais confiança.
           </p>
         </div>
-        <p className="mt-10 font-serif text-xl sm:text-2xl text-foreground">
-          Caminho Essencial — 12x de R$ 35,68
-          <br />
-          <span className="text-[color:var(--color-petrol)]">à vista R$ 347,00</span>
+        <p className="mt-10 text-[11px] font-medium uppercase tracking-[0.22em] text-[color:var(--color-olive)]">
+          Caminho Essencial
         </p>
+        <p className="mt-3 font-serif text-4xl sm:text-5xl leading-none tracking-tight text-foreground">
+          12x de R$ 35,68
+        </p>
+        <p className="mt-2 text-[15px] sm:text-base text-muted-foreground">ou R$ 347,00 à vista</p>
         <div className="mt-8">
           <CTA className="w-full sm:w-auto">Quero conhecer o meu Desenho Humano</CTA>
         </div>
