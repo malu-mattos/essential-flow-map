@@ -3,11 +3,12 @@ import fullLogoAsset from "@/assets/caminho-essencial-full-logo.png.asset.json";
 import { CTA } from "./CTA";
 
 const NAV = [
-  { href: "/#chaves", label: "As chaves do seu mapa" },
+  { href: "/#o-que-e", label: "O que é" },
+  { href: "/#chaves", label: "As chaves" },
   { href: "/#transformacao", label: "O que muda" },
-  { href: "/#para-quem", label: "Para quem é" },
+  { href: "/#para-quem", label: "Para quem" },
   { href: "/#como-funciona", label: "Sua jornada" },
-  { href: "/#quem-sou", label: "Quem sou" },
+  { href: "/#quem-sou", label: "Quem conduz" },
   { href: "/#faq", label: "Perguntas frequentes" },
 ];
 
