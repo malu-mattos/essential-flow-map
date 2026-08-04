@@ -438,9 +438,13 @@ function Investimento() {
           <div className="relative">
             <Eyebrow>Investimento</Eyebrow>
             <h2 className="mt-4 font-serif text-3xl sm:text-4xl">Caminho Essencial</h2>
-            <div className="mt-8 flex flex-col items-center gap-1">
-              <span className="font-serif text-xl text-foreground/80">12x de R$ 35,68</span>
-              <span className="font-serif text-lg text-muted-foreground">à vista R$ 347,00</span>
+            <div className="mt-8 flex flex-col items-center gap-2">
+              <span className="font-serif text-5xl sm:text-6xl leading-none tracking-tight text-foreground">
+                12x de R$ 35,68
+              </span>
+              <span className="text-[15px] sm:text-base text-muted-foreground">
+                ou R$ 347,00 à vista
+              </span>
             </div>
 
             <ul className="mt-8 flex flex-col items-center gap-2 text-[14.5px] text-muted-foreground">
