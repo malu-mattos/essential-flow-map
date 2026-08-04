@@ -110,12 +110,6 @@ function OQueE() {
   return (
     <Section id="o-que-e">
       <div className="relative max-w-3xl mx-auto text-center">
-        <img
-          src={logoAsset.url}
-          alt=""
-          aria-hidden
-          className="pointer-events-none select-none absolute -right-20 -bottom-20 sm:-right-32 sm:-bottom-32 h-64 w-64 sm:h-80 sm:w-80 opacity-10"
-        />
         <div className="relative">
           <Eyebrow>O que é</Eyebrow>
           <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl leading-tight">
