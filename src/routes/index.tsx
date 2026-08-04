@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import logoAsset from "@/assets/caminho-essencial-symbol.png.asset.json";
 import maluPhoto from "@/assets/malu-mattos.jpg.asset.json";
 import {
   EnergyIcon,
@@ -16,7 +15,6 @@ import {
 } from "@/components/ce/icons";
 import { CTA } from "@/components/ce/CTA";
 import { SiteHeader } from "@/components/ce/SiteHeader";
-import { SiteFooter } from "@/components/ce/SiteFooter";
 import { CHECKOUT_URL } from "@/lib/constants";
 
 export const Route = createFileRoute("/")({
@@ -606,7 +604,6 @@ function LandingPage() {
         <FinalSection />
         <Faq />
       </main>
-      <SiteFooter />
       <MobileStickyCTA />
     </div>
   );
