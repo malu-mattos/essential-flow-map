@@ -81,13 +81,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Compreenda seu Tipo, Estratégia, Autoridade e Perfil por meio de uma análise personalizada de Desenho Humano, com gravação, PDF e encontro de tira-dúvidas.",
+          "Compreenda seu Tipo, Estratégia, Autoridade e Perfil em uma leitura individual ao vivo de Desenho Humano, com cerca de 2 horas e PDF personalizado.",
       },
       { property: "og:title", content: "Caminho Essencial | Análise Personalizada de Desenho Humano" },
       {
         property: "og:description",
         content:
-          "Análise personalizada de Desenho Humano: gravação, PDF e encontro de tira-dúvidas para você viver com mais clareza, leveza e confiança.",
+          "Leitura individual ao vivo de Desenho Humano, com cerca de 2 horas e PDF personalizado, para viver com mais clareza, leveza e confiança.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
