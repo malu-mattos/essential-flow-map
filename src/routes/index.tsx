@@ -9,7 +9,6 @@ import {
   SparkleIcon,
   CheckIcon,
   ChevronIcon,
-  PlayIcon,
   PdfIcon,
   ChatIcon,
 } from "@/components/ce/icons";
@@ -24,7 +23,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Leitura individual do seu mapa de Desenho Humano: Tipo, Estratégia, Autoridade e Perfil, com gravação, PDF e encontro de acompanhamento.",
+          "Leitura individual e ao vivo do seu mapa de Desenho Humano, com cerca de 2 horas de duração e PDF personalizado.",
       },
       { property: "og:title", content: "Caminho Essencial | Análise de Desenho Humano" },
       {
@@ -94,7 +93,7 @@ function Hero() {
           Você não precisa continuar se esforçando para funcionar como todo mundo.
         </p>
         <p className="mt-5 text-[16px] sm:text-[17px] leading-relaxed text-muted-foreground max-w-2xl mx-auto">
-          O <span className="font-serif italic text-[color:var(--color-petrol)]">Caminho Essencial</span> é uma leitura individual do seu mapa de Desenho Humano, criada para ajudar você a compreender melhor o seu funcionamento, reconhecer os seus potenciais e aplicar esse conhecimento na vida real.
+          O <span className="font-serif italic text-[color:var(--color-petrol)]">Caminho Essencial</span> é uma leitura individual e ao vivo do seu mapa de Desenho Humano, com cerca de 2 horas de duração, criada para ajudar você a compreender melhor o seu funcionamento, reconhecer seus potenciais e aplicar esse conhecimento na vida real.
         </p>
         <div className="mt-10">
           <CTA className="w-full sm:w-auto">Quero conhecer o meu Desenho</CTA>
@@ -174,7 +173,7 @@ function Revelacoes() {
         ))}
       </div>
       <div className="mt-12 flex justify-center">
-        <CTA className="w-full sm:w-auto">Quero receber minha análise</CTA>
+        <CTA className="w-full sm:w-auto">Quero fazer minha leitura</CTA>
       </div>
     </Section>
   );
@@ -285,9 +284,9 @@ function ParaQuem() {
 function Entrega() {
   const items = [
     {
-      icon: PlayIcon,
-      title: "Análise gravada",
-      body: "Preparada individualmente a partir do seu mapa.",
+      icon: ChatIcon,
+      title: "Leitura individual ao vivo",
+      body: "Um encontro individual de cerca de 2 horas para conhecer o seu mapa, compreender suas principais características e conversar sobre como elas aparecem na sua vida.",
     },
     {
       icon: EnergyIcon,
@@ -298,16 +297,6 @@ function Entrega() {
       icon: PdfIcon,
       title: "PDF personalizado",
       body: "Com as principais chaves da sua análise.",
-    },
-    {
-      icon: SparkleIcon,
-      title: "Entrega em até 15 dias",
-      body: "Após o pagamento e o envio completo dos seus dados.",
-    },
-    {
-      icon: ChatIcon,
-      title: "Encontro de acompanhamento",
-      body: "Para aprofundar os pontos importantes e esclarecer dúvidas.",
     },
   ];
   return (
@@ -340,19 +329,15 @@ function ComoFunciona() {
   const steps = [
     {
       title: "Envio dos dados",
-      body: "Você receberá as orientações para informar: nome completo, data de nascimento, horário exato, cidade de nascimento, e-mail e telefone.",
+      body: "Você receberá as orientações para informar nome completo, data de nascimento, horário exato, cidade de nascimento, e-mail e telefone.",
     },
     {
-      title: "Preparação da análise",
-      body: "A leitura será desenvolvida individualmente a partir do seu mapa.",
+      title: "Preparação do seu mapa",
+      body: "Antes do nosso encontro, seu mapa será preparado e analisado individualmente para orientar a leitura.",
     },
     {
-      title: "Entrega",
-      body: "Você receberá a gravação e o PDF em até 15 dias após o pagamento e o envio dos dados.",
-    },
-    {
-      title: "Encontro de acompanhamento",
-      body: "Cerca de 10 dias após a entrega, teremos um encontro individual para aprofundar a análise e esclarecer as dúvidas que surgirem.",
+      title: "Leitura individual ao vivo",
+      body: "No encontro, vamos percorrer os principais pilares do seu Desenho Humano e conversar sobre como essas características aparecem na sua vida, com espaço para perguntas e aprofundamentos.",
     },
   ];
   return (
@@ -420,10 +405,9 @@ function QuemSou() {
 
 function Investimento() {
   const bullets = [
-    "análise gravada",
+    "leitura individual ao vivo de cerca de 2 horas",
+    "Tipo, Estratégia, Autoridade e Perfil",
     "PDF personalizado",
-    "encontro de acompanhamento",
-    "entrega em até 15 dias",
   ];
 
   return (
@@ -455,7 +439,7 @@ function Investimento() {
             </ul>
 
             <div className="mt-10">
-              <CTA className="w-full sm:w-auto">Quero receber minha análise</CTA>
+              <CTA className="w-full sm:w-auto">Quero fazer minha leitura</CTA>
             </div>
           </div>
         </div>
@@ -470,20 +454,12 @@ const FAQ_ITEMS = [
     a: "Não. A análise foi pensada para quem está começando e deseja conhecer os pilares centrais do próprio Desenho.",
   },
   {
-    q: "A análise é feita ao vivo?",
-    a: "Não. Ela é preparada e gravada individualmente para você, permitindo que assista no seu tempo e retome os pontos sempre que desejar.",
-  },
-  {
-    q: "Quando receberei minha análise?",
-    a: "A gravação e o PDF serão entregues em até 15 dias após o pagamento e o recebimento completo dos seus dados.",
+    q: "Como acontece a leitura?",
+    a: "A leitura acontece ao vivo, em um encontro individual com a Malu, com cerca de 2 horas de duração. Vamos percorrer os principais pilares do seu mapa e conversar sobre como eles aparecem na sua vida, com espaço para perguntas e aprofundamentos ao longo do encontro.",
   },
   {
     q: "Preciso saber meu horário de nascimento?",
     a: "Sim. O horário é necessário para gerar o mapa. Quanto mais exata for a informação, mais confiável será a análise.",
-  },
-  {
-    q: "Como acontece o encontro de acompanhamento?",
-    a: "O encontro é agendado após a entrega e pode acontecer por videochamada ou chamada de voz, de acordo com a sua preferência.",
   },
   {
     q: "A análise substitui terapia?",
